@@ -13,6 +13,7 @@
           <td><?=$p->valor?></td>
           <td><?=$p->quantidade?></td>
           <td><?=$p->descricao?></td>
+          <td><a href="/produtos/mostra/<?=$p->id?>">Ver</a></td>
         </tr>
       <?php endforeach;?>
     </table>
