@@ -15,10 +15,14 @@ Route::get('/', function () {
     return ('Primeira lógica com Laravel');
 });
 
-Route::get('/produtos','ProdutoController@lista');
+Route::get('/produtos', 'ProdutoController@lista');
 
-Route::get('/produtos/mostra/{id}','ProdutoController@mostra')->where('id', '[0-9]+');
+Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->where('id', '[0-9]+');
 
-Route::get('/produtos/novo','ProdutoController@novo');
+Route::get('/produtos/novo', 'ProdutoController@novo');
 
-Route::post('/produtos/adiciona','ProdutoController@adiciona');
+Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
+
+Route::get('/produtos/lista', 'ProdutoController@lista');
+
+Route::get('/produtos/json', 'ProdutoController@listaJson');
