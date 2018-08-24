@@ -13,7 +13,8 @@
                     <td>{{$p->valor}}</td>
                     <td>{{$p->quantidade}}</td>
                     <td>{{$p->descricao}}</td>
-                    <td><a href="/produtos/mostra/{{$p->id}}"><i class="fab fa-searchengin"></i></a></td>
+                    <td><a href="{{action('ProdutoController@mostra', $p->id)}}"><i class="fab fa-searchengin"></i></a></td>
+                    <td><a href="{{action('ProdutoController@remove', $p->id)}}"><i class="far fa-trash-alt"></i></a></td>
                 </tr>
             @endforeach
         </table>
