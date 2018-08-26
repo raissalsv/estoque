@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return ('Primeira lógica com Laravel');
-});
-
 Route::get('/produtos', 'ProdutoController@lista');
 
 Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->where('id', '[0-9]+');
@@ -28,3 +24,7 @@ Route::get('/produtos/lista', 'ProdutoController@lista');
 Route::get('/produtos/json', 'ProdutoController@listaJson');
 
 Route::get('/produtos/remove/{id}', 'ProdutoController@remove');
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
